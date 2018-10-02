@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PrefFrameworkDemo</string>
+    <string name="menu_settings">Settings</string>
+</resources>
