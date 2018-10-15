@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity(), MyLocationProvider.OnNewLocationAvaila
 
 
     private lateinit var myLocationProvider: MyLocationProvider
+    private var lastLocation: Location? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +29,12 @@ class MainActivity : AppCompatActivity(), MyLocationProvider.OnNewLocationAvaila
 
         btnStart.setOnClickListener{
             startLocationMonitoringWithPermissionCheck()
+        }
+
+        btnGeocode.setOnClickListener{
+            if (lastLocation != null) {
+                geocodeLocation(lastLocation!!)
+            }
         }
     }
 
@@ -58,16 +65,26 @@ class MainActivity : AppCompatActivity(), MyLocationProvider.OnNewLocationAvaila
 
     override fun onNewLocation(location: Location) {
         tvLocData.text = getLocationText(location)
+        lastLocation = location
+    }
 
+    private fun geocodeLocation(location: Location) {
+        Thread {
+            try {
+                val gc = Geocoder(this, Locale.getDefault())
+                var addrs: List<Address> =
+                        gc.getFromLocation(location.latitude, location.longitude, 3)
+                val addr =
+                        "${addrs[0].getAddressLine(0)}, ${addrs[0].getAddressLine(1)}, ${addrs[0].getAddressLine(2)}"
 
-        val gc = Geocoder(this, Locale.getDefault())
-        var addrs: List<Address> =
-            gc.getFromLocation(location.latitude, location.longitude, 3)
-        val addr =
-                "${addrs[0].getAddressLine(0)}, ${addrs[0].getAddressLine(1)}, ${addrs[0].getAddressLine(2)}"
-
-        Toast.makeText(this, addr, Toast.LENGTH_LONG).show()
-
+                runOnUiThread {
+                    Toast.makeText(this, addr, Toast.LENGTH_LONG).show()
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(this@MainActivity, "Error: ${e.message}", Toast.LENGTH_LONG).show()
+            }
+        }.start()
     }
 
     private fun getLocationText(location: Location): String {
