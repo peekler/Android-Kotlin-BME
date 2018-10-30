@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        >
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello AudioRecord Demo"
+            />
+
+    <Button
+            android:id="@+id/btnStartRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start recording"
+            />
+
+    <Button
+            android:id="@+id/btnStopRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop recording"
+            />
+
+    <Button
+            android:id="@+id/btnStartPlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start playing"
+            />
+
+    <Button
+            android:id="@+id/btnStopPlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop playing"
+            />
+
+</LinearLayout>
