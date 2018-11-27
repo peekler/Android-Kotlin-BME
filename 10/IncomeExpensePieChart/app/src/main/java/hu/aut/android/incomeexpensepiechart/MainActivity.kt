@@ -3,6 +3,7 @@ package hu.aut.android.incomeexpensepiechart
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
@@ -27,13 +28,17 @@ class MainActivity : AppCompatActivity(), OnChartValueSelectedListener {
         updateChart()
 
         btnIncome.setOnClickListener {
-            income += etMoney.text.toString().toInt()
-            updateChart()
+            if (!TextUtils.isEmpty(etMoney.text.toString())) {
+                income += etMoney.text.toString().toInt()
+                updateChart()
+            }
         }
 
         btnExpense.setOnClickListener {
-            expense += etMoney.text.toString().toInt()
-            updateChart()
+            if (!TextUtils.isEmpty(etMoney.text.toString())) {
+                expense += etMoney.text.toString().toInt()
+                updateChart()
+            }
         }
 
         chartBalance.setOnChartValueSelectedListener(this)
