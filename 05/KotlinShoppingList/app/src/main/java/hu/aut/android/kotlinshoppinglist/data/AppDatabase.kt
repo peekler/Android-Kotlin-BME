@@ -17,6 +17,7 @@ abstract class AppDatabase : RoomDatabase() {
             if (INSTANCE == null) {
                 INSTANCE = Room.databaseBuilder(context.applicationContext,
                         AppDatabase::class.java, "shopping.db")
+                        .fallbackToDestructiveMigration()
                         .build()
             }
             return INSTANCE!!

@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showHomeFragment() {
         val homeFragment=HomeFragment()
+
         val ft=supportFragmentManager.beginTransaction()
         ft.add(R.id.fragmentContainer,homeFragment,HomeFragment.TAG)
         ft.commit()

@@ -24,7 +24,16 @@ class MainActivity : AppCompatActivity() {
 
         registerReceiver(
                 AirPlaneReceiver(),
-                IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED)
+        IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED)
+        )
+
+        registerReceiver(
+                BootReceiver(),
+                IntentFilter(Intent.ACTION_BOOT_COMPLETED)
+        )
+        registerReceiver(
+                BootReceiver(),
+                IntentFilter(Intent.ACTION_LOCKED_BOOT_COMPLETED)
         )
 
     }
@@ -39,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             ActivityCompat.requestPermissions(this,
-                    arrayOf(Manifest.permission.RECEIVE_SMS, Manifest.permission.PROCESS_OUTGOING_CALLS),
+                    arrayOf(Manifest.permission.RECEIVE_SMS, Manifest.permission.PROCESS_OUTGOING_CALLS, Manifest.permission.RECEIVE_BOOT_COMPLETED),
                     101)
         } else {
         }
@@ -52,13 +61,14 @@ class MainActivity : AppCompatActivity() {
                 // If request is cancelled, the result arrays are empty.
                 if (grantResults.isNotEmpty()
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED
-                        && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(this@MainActivity, "RECEIVE_SMS and call perm granted", Toast.LENGTH_SHORT).show()
+                        && grantResults[1] == PackageManager.PERMISSION_GRANTED
+                        && grantResults[2] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this@MainActivity, "RECEIVE_SMS and call and boot perm granted", Toast.LENGTH_SHORT).show()
 
 
                 } else {
                     Toast.makeText(this@MainActivity,
-                            "RECEIVE_SMS and call perm NOT granted", Toast.LENGTH_SHORT).show()
+                            "RECEIVE_SMS and call and boot perm NOT granted", Toast.LENGTH_SHORT).show()
                 }
                 return
             }
