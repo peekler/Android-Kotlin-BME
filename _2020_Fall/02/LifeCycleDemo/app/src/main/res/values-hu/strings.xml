@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LifeCycleDeom</string>
+
+    <string name="btn_details">Mutasd a részleteket</string>
+    <string name="btn_weather">Mutasd az időjárást</string>
+    <string name="never_toast">Soha nem lépsz ki</string>
+    <string name="game_status">The current player is: %1s, score is %2d</string>
+</resources>

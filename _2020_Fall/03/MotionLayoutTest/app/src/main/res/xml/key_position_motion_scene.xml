@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="3000">
+
+        <!-- Either click or swipe -->
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@id/imageView" />
+
+
+        <!--<OnSwipe
+            app:dragDirection="dragRight"
+            app:onTouchUp="stop"
+            app:touchAnchorId="@id/imageView" />-->
+
+        <KeyFrameSet>
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/imageView"
+                app:percentY="0.5" />
+            <KeyPosition
+                app:framePosition="75"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/imageView"
+                app:percentY="0.1" />
+            <KeyAttribute
+                android:alpha="0.3"
+                app:framePosition="25"
+                app:motionTarget="@+id/imageView" />
+
+            <KeyAttribute
+                android:scaleX="2.0"
+                app:framePosition="10"
+                app:motionTarget="@+id/imageView" />
+        </KeyFrameSet>
+    </Transition>
+
+    <!-- Constraints to apply at the start of the animation -->
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+    <!-- Constraints to apply at the end of the animation -->
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:rotation="180"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </ConstraintSet>
+</MotionScene>

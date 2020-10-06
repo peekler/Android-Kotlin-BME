@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LifeCycleDeom</string>
+
+    <string name="btn_details">Show details</string>
+    <string name="btn_weather">Show weather</string>
+    <string name="never_toast">Soha nem lépsz ki</string>
+
+    <string name="game_status">The current player is: %1s, score is %2d</string>
+</resources>
