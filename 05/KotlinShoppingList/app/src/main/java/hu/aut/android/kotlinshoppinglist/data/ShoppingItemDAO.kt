@@ -1,16 +1,13 @@
 package hu.aut.android.kotlinshoppinglist.data
 
-import android.arch.persistence.room.Dao
-import android.arch.persistence.room.Delete
-import android.arch.persistence.room.Insert
-import android.arch.persistence.room.Query
-import android.arch.persistence.room.Update
+import androidx.lifecycle.LiveData
+import androidx.room.*
 
 @Dao
 interface ShoppingItemDAO {
 
     @Query("SELECT * FROM shoppingitem")
-    fun findAllItems(): List<ShoppingItem>
+    fun findAllItems(): LiveData<List<ShoppingItem>>
 
     @Insert
     fun insertItem(item: ShoppingItem): Long
@@ -18,7 +15,7 @@ interface ShoppingItemDAO {
     @Delete
     fun deleteItem(item: ShoppingItem)
 
-    @Update
+    @Update(onConflict = OnConflictStrategy.REPLACE)
     fun updateItem(item: ShoppingItem)
 
 }

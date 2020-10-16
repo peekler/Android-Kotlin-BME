@@ -5,7 +5,7 @@ import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
 import android.content.Context
 
-@Database(entities = arrayOf(Grade::class), version = 1)
+@Database(entities = [Grade::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun gradeDao(): GradeDAO

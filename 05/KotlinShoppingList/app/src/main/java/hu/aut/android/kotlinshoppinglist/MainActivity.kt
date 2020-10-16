@@ -1,8 +1,6 @@
 package hu.aut.android.kotlinshoppinglist
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import hu.aut.android.kotlinshoppinglist.adapter.ShoppingAdapter
@@ -10,15 +8,15 @@ import kotlinx.android.synthetic.main.activity_main.*
 import android.R.id.edit
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
-import android.support.v7.widget.helper.ItemTouchHelper
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.ItemTouchHelper
 import hu.aut.android.kotlinshoppinglist.data.AppDatabase
 import hu.aut.android.kotlinshoppinglist.data.ShoppingItem
 import hu.aut.android.kotlinshoppinglist.touch.ShoppingTouchHelperCallback
 import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt
-
-
-
+import kotlin.concurrent.thread
 
 
 class MainActivity : AppCompatActivity(), ShoppingItemDialog.ShoppingItemHandler {
@@ -48,7 +46,6 @@ class MainActivity : AppCompatActivity(), ShoppingItemDialog.ShoppingItemHandler
                     .show()
         }
 
-
         saveThatItWasStarted()
     }
 
@@ -65,23 +62,17 @@ class MainActivity : AppCompatActivity(), ShoppingItemDialog.ShoppingItemHandler
                 .apply()
     }
 
-
-
-
     private fun initRecyclerView() {
-        val dbThread = Thread {
-            val items = AppDatabase.getInstance(this).shoppingItemDao().findAllItems()
+        adapter = ShoppingAdapter(this)
+        recyclerShopping.adapter = adapter
 
-            runOnUiThread{
-                adapter = ShoppingAdapter(this, items)
-                recyclerShopping.adapter = adapter
+        AppDatabase.getInstance(this).shoppingItemDao().findAllItems().observe(this, Observer { items ->
+            adapter.submitList(items)
+        })
 
-                val callback = ShoppingTouchHelperCallback(adapter)
-                val touchHelper = ItemTouchHelper(callback)
-                touchHelper.attachToRecyclerView(recyclerShopping)
-            }
-        }
-        dbThread.start()
+        val callback = ShoppingTouchHelperCallback(adapter)
+        val touchHelper = ItemTouchHelper(callback)
+        touchHelper.attachToRecyclerView(recyclerShopping)
     }
 
     fun showEditItemDialog(itemToEdit: ShoppingItem) {
@@ -96,26 +87,14 @@ class MainActivity : AppCompatActivity(), ShoppingItemDialog.ShoppingItemHandler
 
 
     override fun shoppingItemCreated(item: ShoppingItem) {
-        val dbThread = Thread {
-            val id = AppDatabase.getInstance(this@MainActivity).shoppingItemDao().insertItem(item)
-
-            item.itemId = id
-
-            runOnUiThread{
-                adapter.addItem(item)
-            }
+        thread {
+            AppDatabase.getInstance(this@MainActivity).shoppingItemDao().insertItem(item)
         }
-        dbThread.start()
     }
 
     override fun shoppingItemUpdated(item: ShoppingItem) {
-        adapter.updateItem(item)
-
-        val dbThread = Thread {
+        thread {
             AppDatabase.getInstance(this@MainActivity).shoppingItemDao().updateItem(item)
-
-            runOnUiThread { adapter.updateItem(item) }
         }
-        dbThread.start()
     }
 }

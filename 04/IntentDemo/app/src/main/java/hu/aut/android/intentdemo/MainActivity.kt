@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
     }
 
     fun intentClick(view: View) {
@@ -22,7 +21,9 @@ class MainActivity : AppCompatActivity() {
 
         //intentSend()
 
-        intentWaze()
+        //intentWaze()
+
+        intentStreetMaps()
     }
 
     private fun intentSearch() {
@@ -44,8 +45,7 @@ class MainActivity : AppCompatActivity() {
         intentSend.`package` = "com.facebook.katana"
         intentSend.putExtra(Intent.EXTRA_TEXT, "Jee  Tanfolyam!")
         startActivity(intentSend)
-        //startActivity(Intent.createChooser(intentSend,
-        //        "Select share app"));
+        //startActivity(Intent.createChooser(intentSend, "Select share app"));
     }
 
     private fun intentWaze() {
@@ -56,5 +56,13 @@ class MainActivity : AppCompatActivity() {
         val intentTest = Intent(Intent.ACTION_VIEW)
         intentTest.data = Uri.parse(wazeUri)
         startActivity(intentTest)
+    }
+
+    private fun intentStreetMaps() {
+        val gmmIntentUri = Uri.parse(
+                "google.streetview:cbll=29.9774614,31.1329645&cbp=0,30,0,0,-15")
+        val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+        mapIntent.setPackage("com.google.android.apps.maps")
+        startActivity(mapIntent)
     }
 }

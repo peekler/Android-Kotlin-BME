@@ -1,10 +1,10 @@
 package hu.aut.android.kotlinshoppinglist.data
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.io.Serializable
 
-import android.arch.persistence.room.Entity
-import android.arch.persistence.room.ColumnInfo
-import android.arch.persistence.room.PrimaryKey
 
 @Entity(tableName = "shoppingitem")
 data class ShoppingItem(@PrimaryKey(autoGenerate = true) var itemId: Long?,
