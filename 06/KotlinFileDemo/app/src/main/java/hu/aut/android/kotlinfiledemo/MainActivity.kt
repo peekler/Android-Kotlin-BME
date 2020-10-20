@@ -100,6 +100,7 @@ class MainActivity : AppCompatActivity() {
         var result = ""
 
         val file = "${Environment.getExternalStorageDirectory()}/test.txt"
+
         lateinit var inputStream: FileInputStream
         try {
             inputStream = FileInputStream(file)
