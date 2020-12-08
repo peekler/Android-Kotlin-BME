@@ -13,6 +13,7 @@ import java.net.URL
 
 class HttpGetTask(private val ctx: Context) : AsyncTask<String, Void, String>() {
 
+
     override fun doInBackground(vararg params: String): String {
         var result = ""
         var connection: HttpURLConnection? = null

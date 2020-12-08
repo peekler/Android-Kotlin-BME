@@ -5,6 +5,9 @@ import retrofit2.Callback
 import retrofit2.http.GET
 import retrofit2.http.Query
 
+//https://api.exchangeratesapi.io/
+//
+// latest?base=USD
 
 interface CurrencyExchangeAPI {
     @GET("/latest")

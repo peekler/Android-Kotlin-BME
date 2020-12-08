@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Exchange</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="exchange">Exchange</string>
+
+    <string-array name="currencies">
+        <item>CAD</item>
+        <item>HKD</item>
+        <item>ISK</item>
+        <item>PHP</item>
+        <item>DKK</item>
+        <item>HUF</item>
+        <item>CZK</item>
+        <item>GBP</item>
+        <item>RON</item>
+        <item>SEK</item>
+        <item>IDR</item>
+        <item>INR</item>
+        <item>BRL</item>
+        <item>RUB</item>
+        <item>HRK</item>
+        <item>JPY</item>
+        <item>THB</item>
+        <item>CHF</item>
+        <item>EUR</item>
+        <item>MYR</item>
+        <item>BGN</item>
+        <item>TRY</item>
+        <item>CNY</item>
+        <item>NOK</item>
+        <item>NZD</item>
+        <item>ZAR</item>
+        <item>USD</item>
+        <item>MXN</item>
+        <item>SGD</item>
+        <item>AUD</item>
+        <item>ILS</item>
+        <item>KRW</item>
+        <item>PLN</item>
+    </string-array>
+</resources>

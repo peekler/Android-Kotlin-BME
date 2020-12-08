@@ -108,7 +108,7 @@ class TimeService: Service() {
     }
 
     override fun onDestroy() {
-        stopForeground(true)
+        stopForeground(false)
         enabled = false
         super.onDestroy()
     }

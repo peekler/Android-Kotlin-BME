@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
             .baseUrl("https://api.exchangeratesapi.io/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-
         val currencyAPI = retrofit.create(CurrencyExchangeAPI::class.java)
 
         btnGetRate.setOnClickListener {

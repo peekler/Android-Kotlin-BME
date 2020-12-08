@@ -11,6 +11,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        const val REQUEST_CODE_CAMERA = 1001
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,12 +28,8 @@ class MainActivity : AppCompatActivity() {
         permissions = [Manifest.permission.CAMERA]
     )
     private fun takePhoto() {
-        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also {
-            takePhotoIntent ->
-            takePhotoIntent.resolveActivity(packageManager)?.also {
-                startActivityForResult(takePhotoIntent, 1001)
-            }
-        }
+        val intentCamera = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        startActivityForResult(intentCamera, REQUEST_CODE_CAMERA)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
