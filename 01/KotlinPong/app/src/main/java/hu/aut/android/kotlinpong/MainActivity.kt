@@ -2,6 +2,7 @@ package hu.aut.android.kotlinpong
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
             pong.stopGame()
         }
 
-
     }
+
+
 }

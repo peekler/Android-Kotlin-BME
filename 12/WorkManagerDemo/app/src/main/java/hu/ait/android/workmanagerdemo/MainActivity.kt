@@ -15,10 +15,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val constraints = Constraints.Builder()
-                .setRequiresCharging(true)
+                //.setRequiresCharging(true)
                 .setRequiredNetworkType(NetworkType.CONNECTED)
                 .build()
         val workRequest = OneTimeWorkRequest.Builder(MyWorker::class.java).setConstraints(constraints).build()
         WorkManager.getInstance().enqueue(workRequest)
+
     }
 }

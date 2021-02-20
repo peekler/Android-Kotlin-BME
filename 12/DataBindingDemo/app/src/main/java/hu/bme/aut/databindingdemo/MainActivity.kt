@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
             //binding.toastName = "Demo23333"
 
-            Toast.makeText(this, binding.cityName, Toast.LENGTH_LONG).show()
+            Toast.makeText(this, binding.cityName,  Toast.LENGTH_LONG).show()
         }
     }
 }

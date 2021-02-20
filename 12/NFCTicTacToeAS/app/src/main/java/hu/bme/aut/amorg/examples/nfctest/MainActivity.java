@@ -116,6 +116,7 @@ public class MainActivity extends Activity implements GameStateListener {
 		try {
 			ndefDetected.addDataType("text/plain");
 		} catch (MalformedMimeTypeException e) {
+			
 		}
 
 		gameView = (GameView) findViewById(R.id.game_view);

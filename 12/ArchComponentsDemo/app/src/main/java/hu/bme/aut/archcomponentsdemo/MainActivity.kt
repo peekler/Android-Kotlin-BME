@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         // 2.
         /*val acceleroLiveData = AcceleroSensorLiveData(this)
+
         acceleroLiveData.observe(this,
             object: Observer<SensorEvent>{
                 override fun onChanged(t: SensorEvent?) {
