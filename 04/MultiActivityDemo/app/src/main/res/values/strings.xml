@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MultiActivityDemo</string>
+    <string name="text_cancelled">CANCELLED</string>
+</resources>
