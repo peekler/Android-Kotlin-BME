@@ -17,42 +17,43 @@ import hu.aut.android.kotlinshoppinglist.R
 import hu.aut.android.kotlinshoppinglist.adapter.ShoppingAdapter.ViewHolder
 import hu.aut.android.kotlinshoppinglist.data.AppDatabase
 import hu.aut.android.kotlinshoppinglist.data.ShoppingItem
+import hu.aut.android.kotlinshoppinglist.databinding.RowItemBinding
 import hu.aut.android.kotlinshoppinglist.touch.ShoppingTouchHelperAdapter
 import kotlinx.android.synthetic.main.row_item.view.*
 import java.util.*
 import kotlin.concurrent.thread
 
-class ShoppingAdapter(var context: Context) : ListAdapter<ShoppingItem, ViewHolder>(ShopDiffCallback()), ShoppingTouchHelperAdapter {
+class ShoppingAdapter(var context: Context) :
+    ListAdapter<ShoppingItem, ViewHolder>(ShopDiffCallback()), ShoppingTouchHelperAdapter {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(
-                R.layout.row_item, parent, false
-        )
-        return ViewHolder(view)
+        val binding = RowItemBinding
+            .inflate(LayoutInflater.from(parent.context), parent, false)
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
-        holder.adapterPosition
-        holder.tvName.text = item.name
-        holder.tvPrice.text = item.price.toString()
-        holder.cbBought.isChecked = item.bought
+        holder.bind(item)
 
-        holder.btnDelete.setOnClickListener {
-            thread {
-                AppDatabase.getInstance(context).shoppingItemDao().deleteItem(item)
+        with(holder) {
+            binding.btnDelete.setOnClickListener {
+                thread {
+                    AppDatabase.getInstance(context).shoppingItemDao().deleteItem(item)
+                }
             }
-        }
 
-        holder.btnEdit.setOnClickListener {
-            (holder.itemView.context as MainActivity).showEditItemDialog(
-                    item)
-        }
+            binding.btnEdit.setOnClickListener {
+                (holder.itemView.context as MainActivity).showEditItemDialog(
+                    item
+                )
+            }
 
-        holder.cbBought.setOnClickListener {
-            item.bought = holder.cbBought.isChecked
-            thread {
-                AppDatabase.getInstance(context).shoppingItemDao().updateItem(item)
+            binding.cbBought.setOnClickListener {
+                item.bought = binding.cbBought.isChecked
+                thread {
+                    AppDatabase.getInstance(context).shoppingItemDao().updateItem(item)
+                }
             }
         }
     }
@@ -67,13 +68,12 @@ class ShoppingAdapter(var context: Context) : ListAdapter<ShoppingItem, ViewHold
         notifyItemMoved(fromPosition, toPosition)
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvName: TextView = itemView.tvName
-        val tvPrice: TextView = itemView.tvPrice
-        val cbBought: CheckBox = itemView.cbBought
-        val btnDelete: Button = itemView.btnDelete
-        val btnEdit: Button = itemView.btnEdit
+    inner class ViewHolder(val binding: RowItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: ShoppingItem) {
+            binding.item = item
+        }
     }
+
 }
 
 class ShopDiffCallback : DiffUtil.ItemCallback<ShoppingItem>() {
