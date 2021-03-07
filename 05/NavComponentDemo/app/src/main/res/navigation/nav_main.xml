@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/mainScreenFragment"
+    android:id="@+id/nav_main">
+
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="hu.bme.aut.navcontrollertestdemo.MainFragment"
+        tools:layout="@layout/fragment_main"
+        android:label="fragment_main">
+        <action
+            android:id="@+id/action_mainScreenFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="hu.bme.aut.navcontrollertestdemo.DetailFragment"
+        tools:layout="@layout/fragment_detail"
+        android:label="fragment_detail" >
+        <argument
+            android:name="person"
+            app:argType="hu.bme.aut.navcontrollertestdemo.Person" />
+    </fragment>
+
+</navigation>
