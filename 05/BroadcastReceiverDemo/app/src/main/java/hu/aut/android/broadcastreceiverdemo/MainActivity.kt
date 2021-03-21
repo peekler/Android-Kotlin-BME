@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         requestNeededPermission()
+
     }
 
     override fun onStart() {
@@ -31,10 +32,10 @@ class MainActivity : AppCompatActivity() {
                 BootReceiver(),
                 IntentFilter(Intent.ACTION_BOOT_COMPLETED)
         )
-        registerReceiver(
+        /*registerReceiver(
                 BootReceiver(),
                 IntentFilter(Intent.ACTION_LOCKED_BOOT_COMPLETED)
-        )
+        )*/
 
     }
 

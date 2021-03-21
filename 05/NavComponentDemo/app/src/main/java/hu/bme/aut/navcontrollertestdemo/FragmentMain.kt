@@ -30,7 +30,8 @@ class MainFragment : Fragment() {
                 bundle)*/
 
             // new solution with SafeArgs
-            view.findNavController().navigate(MainFragmentDirections.actionMainScreenFragmentToDetailFragment(
+            view.findNavController().navigate(
+                MainFragmentDirections.actionMainScreenFragmentToDetailFragment(
                 Person(etName.text.toString(), etAddress.text.toString())))
         }
     }

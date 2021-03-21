@@ -66,7 +66,8 @@ class MainActivity : AppCompatActivity(), ShoppingItemDialog.ShoppingItemHandler
         adapter = ShoppingAdapter(this)
         recyclerShopping.adapter = adapter
 
-        AppDatabase.getInstance(this).shoppingItemDao().findAllItems().observe(this, Observer { items ->
+        AppDatabase.getInstance(this).shoppingItemDao().findAllItems()
+            .observe(this, Observer { items ->
             adapter.submitList(items)
         })
 
