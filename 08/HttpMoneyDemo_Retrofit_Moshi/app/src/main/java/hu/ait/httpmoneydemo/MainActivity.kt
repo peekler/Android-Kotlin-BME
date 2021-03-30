@@ -1,6 +1,7 @@
 package hu.ait.httpmoneydemo
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import hu.ait.httpmoneydemo.data.MoneyResult
 import hu.ait.httpmoneydemo.network.MoneyAPI
 import kotlinx.android.synthetic.main.activity_main.*

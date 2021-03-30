@@ -58,6 +58,10 @@ class MainActivity : AppCompatActivity() {
         btnGetRate.setOnClickListener {
             //HttpGetTask(applicationContext).execute(URL_BASE)
 
+
+
+
+
             /*HttpGetTaskWithCalback { result ->
                 try {
                     val rawJson = JSONObject(result)
@@ -67,7 +71,7 @@ class MainActivity : AppCompatActivity() {
                 } catch (e: JSONException) {
                     e.printStackTrace()
                 }
-            }*/
+            }.execute(URL_BASE)*/
 
 
             /*Thread {
@@ -78,7 +82,7 @@ class MainActivity : AppCompatActivity() {
             }.start()*/
 
 
-            val ratesCall = currencyAPI.getRates("EUR")
+           val ratesCall = currencyAPI.getRates("EUR")
             ratesCall.enqueue(object: Callback<MoneyResult> {
                 override fun onFailure(call: Call<MoneyResult>, t: Throwable) {
                     tvResult.text = t.message
