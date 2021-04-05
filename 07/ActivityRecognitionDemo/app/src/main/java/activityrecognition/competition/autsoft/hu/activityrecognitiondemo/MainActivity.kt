@@ -1,16 +1,20 @@
 package activityrecognition.competition.autsoft.hu.activityrecognitiondemo
 
+import android.Manifest
 import android.app.IntentService
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.content.pm.PackageManager
 import android.os.Bundle
-import android.support.v4.content.LocalBroadcastManager
-import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.google.android.gms.location.*
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -22,6 +26,46 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        requestNeededPermission()
+    }
+
+    private fun requestNeededPermission() {
+        if (ContextCompat.checkSelfPermission(
+                        this,
+                        Manifest.permission.ACTIVITY_RECOGNITION
+                ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(Manifest.permission.ACTIVITY_RECOGNITION),
+                    101
+            )
+        } else {
+            // we have the permission
+        }
+    }
+
+
+    override fun onRequestPermissionsResult(
+            requestCode: Int,
+            permissions: Array<String>, grantResults: IntArray
+    ) {
+        when (requestCode) {
+            101 -> {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this, "ACTIVITY_RECOGNITION perm granted", Toast.LENGTH_SHORT)
+                            .show()
+                } else {
+                    Toast.makeText(
+                            this,
+                            "ACTIVITY_RECOGNITION perm NOT granted", Toast.LENGTH_SHORT
+                    ).show()
+                }
+                return
+            }
+        }
     }
 
     fun requestTransitionUpdates(view: View) {
@@ -34,7 +78,7 @@ class MainActivity : AppCompatActivity() {
             appendToLog("Tracking Started")
             val statusIntentFilter = IntentFilter(ActivityIntentService.ACTION_TRANSITION_UPDATED)
             LocalBroadcastManager.getInstance(this).registerReceiver(statusIntentFilter) {
-                val activityType = it.extras.getInt(ActivityIntentService.EXTRA_ACTIVITY_TYPE, -1)
+                val activityType = it.extras?.getInt(ActivityIntentService.EXTRA_ACTIVITY_TYPE, -1)
                 when (activityType) {
                     DetectedActivity.STILL -> appendToLog("Still Started")
                     DetectedActivity.ON_FOOT -> appendToLog("Standing Started")
@@ -93,7 +137,7 @@ class ActivityIntentService : IntentService("TAG") {
         const val EXTRA_ACTIVITY_TYPE = "EXTRA_ACTIVITY_TYPE"
     }
 
-    override fun onHandleIntent(intent: Intent) {
+    override fun onHandleIntent(intent: Intent?) {
         if (ActivityTransitionResult.hasResult(intent)) {
             val result = ActivityTransitionResult.extractResult(intent) ?: return
             result.transitionEvents.forEach {
@@ -103,6 +147,7 @@ class ActivityIntentService : IntentService("TAG") {
             }
         }
     }
+
 }
 
 private fun LocalBroadcastManager.registerReceiver(intentFilter: IntentFilter, onReceive: (intent: Intent) -> Unit) {
