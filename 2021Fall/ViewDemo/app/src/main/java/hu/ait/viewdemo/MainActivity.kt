@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
         spinnerFruits.onItemSelectedListener = this
 
-myTimer.start()
+        myTimer.start()
 
     }
 

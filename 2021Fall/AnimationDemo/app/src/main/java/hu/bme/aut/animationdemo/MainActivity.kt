@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         sendAnim.setAnimationListener(animListener)
-        demoAnim.setAnimationListener(animListener)
+        //demoAnim.setAnimationListener(animListener)
 
         btnAnim.setOnClickListener {
             //btnAnim.startAnimation(demoAnim)
