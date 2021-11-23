@@ -61,11 +61,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, MainLocationManage
         )
 
 
-        //initMap()
-        //initPlaceSelect()
-        //initMapAndMarkerClick()
-        //drawPolygonAndLine()
-        //setUpClusterer()
+        initMap()
+        initPlaceSelect()
+        initMapAndMarkerClick()
+        drawPolygonAndLine()
+        setUpClusterer()
     }
 
     private fun initPlaceSelect() {

@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
             val dbThread = Thread {
                 AppDatabase.getInstance(this@MainActivity).gradeDao().insertGrades(grade)
+
             }
             dbThread.start()
         }

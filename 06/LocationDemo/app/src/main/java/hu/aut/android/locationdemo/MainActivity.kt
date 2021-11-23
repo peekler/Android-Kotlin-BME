@@ -82,7 +82,9 @@ class MainActivity : AppCompatActivity(), MyLocationProvider.OnNewLocationAvaila
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
-                Toast.makeText(this@MainActivity, "Error: ${e.message}", Toast.LENGTH_LONG).show()
+                runOnUiThread {
+                    Toast.makeText(this@MainActivity, "Error: ${e.message}", Toast.LENGTH_LONG).show()
+                }
             }
         }.start()
     }
