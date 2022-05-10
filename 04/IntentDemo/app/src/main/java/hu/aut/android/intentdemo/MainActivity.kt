@@ -17,13 +17,14 @@ class MainActivity : AppCompatActivity() {
 
     fun intentClick(view: View) {
         //intentSearch()
+
         //intentCall()
 
         //intentSend()
 
-        intentWaze()
+        //intentWaze()
 
-        //intentStreetMaps()
+        intentStreetMaps()
     }
 
     private fun intentSearch() {
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         val intentSend = Intent(Intent.ACTION_SEND)
         intentSend.type = "text/plain"
         intentSend.`package` = "com.facebook.katana"
-        intentSend.putExtra(Intent.EXTRA_TEXT, "BME VIK")
+        intentSend.putExtra(Intent.EXTRA_TEXT, "Intent share demo")
         startActivity(intentSend)
         //startActivity(Intent.createChooser(intentSend, "Select share app"));
     }
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity() {
     private fun intentWaze() {
         //String wazeUri = "waze://?favorite=Home&navigate=yes";
         //val wazeUri = "waze://?ll=40.761043, -73.980545&navigate=yes"
-        val wazeUri = "waze://?q=BME&navigate=yes"
+        val wazeUri = "waze://?q=AIT Budapest&navigate=yes"
         val intentTest = Intent(Intent.ACTION_VIEW)
         intentTest.data = Uri.parse(wazeUri)
         startActivity(intentTest)

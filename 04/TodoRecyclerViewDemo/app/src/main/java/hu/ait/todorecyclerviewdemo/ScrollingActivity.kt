@@ -37,8 +37,8 @@ class ScrollingActivity : AppCompatActivity() {
         )
         recyclerTodo.addItemDecoration(itemDecoration)
 
-        //recyclerTodo.layoutManager = GridLayoutManager(
-        //    this, 2)
+        recyclerTodo.layoutManager = GridLayoutManager(
+            this, 2)
     }
 
 

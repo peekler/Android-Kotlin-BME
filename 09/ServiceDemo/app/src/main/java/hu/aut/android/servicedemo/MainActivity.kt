@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val intentService = Intent(this, TimeService::class.java)
+
         val intentTimeWindowService = Intent(
                 this@MainActivity, FloatingService::class.java
         )
@@ -58,7 +59,8 @@ class MainActivity : AppCompatActivity() {
         val rand = Random(System.currentTimeMillis())
 
         btnGetImage.setOnClickListener {
-            val intentImage = Intent(this@MainActivity, ImageDownloadService::class.java)
+            val intentImage = Intent(this@MainActivity,
+                ImageDownloadService::class.java)
 
             intentImage.putExtra(ImageDownloadService.KEY_MESSENGER,
                     Messenger(handler))
@@ -119,7 +121,8 @@ class MainActivity : AppCompatActivity() {
         override fun onServiceDisconnected(p0: ComponentName?) {
         }
 
-        override fun onServiceConnected(name: ComponentName, serviceBinder: IBinder) {
+        override fun onServiceConnected(name: ComponentName,
+                                        serviceBinder: IBinder) {
             timeService = (serviceBinder as TimeService.TimeServiceBinder).service
 
             Toast.makeText(this@MainActivity, "Bind ready", Toast.LENGTH_LONG).show()

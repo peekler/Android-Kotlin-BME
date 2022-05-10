@@ -10,7 +10,10 @@ class MyProvider : ContentProvider() {
         TODO("Not yet implemented")
     }
 
-    override fun query(uri: Uri, projection: Array<String>?, selection: String?, selectionArgs: Array<String>?, sortOrder: String?): Cursor? {
+    override fun query(uri: Uri, projection: Array<String>?,
+                       selection: String?,
+                       selectionArgs: Array<String>?,
+                       sortOrder: String?): Cursor? {
         TODO("Not yet implemented")
     }
 
