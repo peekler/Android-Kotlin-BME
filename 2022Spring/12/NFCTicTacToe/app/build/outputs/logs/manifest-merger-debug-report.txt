@@ -1,0 +1,123 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:2:1-41:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\03ed0dc6d7298246f590da1120791b8d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\9ac6a6228c87527a1286ff350848ba32\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\d3a4a62bc96f758736ec5c4b72e7d3f6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\21f1be8829ec9cdaba3244491970fd90\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\07f5291954565071f59e64b871c6bc93\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\d2048bfd8e41c00c74c44120fcd6603d\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\92506fbfc9ea00a9d7de8de3f6458065\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\2b2c3837752ed3141a176c61a19c964d\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\3636f8909aad4c50730d147534f21072\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d31d2cb5f9d839715e97cfddf7cb6e4b\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:2:1-41:12
+	package
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:3:5-48
+		INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\03ed0dc6d7298246f590da1120791b8d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\03ed0dc6d7298246f590da1120791b8d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\9ac6a6228c87527a1286ff350848ba32\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\9ac6a6228c87527a1286ff350848ba32\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\d3a4a62bc96f758736ec5c4b72e7d3f6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\d3a4a62bc96f758736ec5c4b72e7d3f6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\21f1be8829ec9cdaba3244491970fd90\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\21f1be8829ec9cdaba3244491970fd90\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\07f5291954565071f59e64b871c6bc93\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\07f5291954565071f59e64b871c6bc93\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\d2048bfd8e41c00c74c44120fcd6603d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\d2048bfd8e41c00c74c44120fcd6603d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\92506fbfc9ea00a9d7de8de3f6458065\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\92506fbfc9ea00a9d7de8de3f6458065\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\2b2c3837752ed3141a176c61a19c964d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\2b2c3837752ed3141a176c61a19c964d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\3636f8909aad4c50730d147534f21072\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\3636f8909aad4c50730d147534f21072\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d31d2cb5f9d839715e97cfddf7cb6e4b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\peter\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d31d2cb5f9d839715e97cfddf7cb6e4b\AndroidManifest.xml:20:5-44
+INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:7:5-9:41
+	android:targetSdkVersion
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:9:9-38
+		INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:8:9-35
+		INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml
+uses-feature#android.hardware.nfc
+ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:11:5-81
+	android:required
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:11:55-78
+	android:name
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:11:19-54
+uses-permission#android.permission.NFC
+ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:13:5-62
+	android:name
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:13:22-59
+application
+ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:15:5-39:19
+	android:label
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:18:9-41
+	android:icon
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:17:9-45
+	android:allowBackup
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:16:9-35
+	android:theme
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:19:9-40
+activity#hu.bme.aut.amorg.examples.nfctest.MainActivity
+ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:20:9-37:20
+	android:screenOrientation
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:23:13-49
+	android:label
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:22:13-45
+	android:name
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:21:13-74
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:24:13-28:29
+action#android.intent.action.MAIN
+ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:25:17-69
+	android:name
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:25:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:27:17-77
+	android:name
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:27:27-74
+intent-filter#action:name:android.nfc.action.NDEF_DISCOVERED+category:name:android.intent.category.DEFAULT+data:host:ext+data:pathPrefix:/com.example:externalType+data:scheme:vnd.android.nfc
+ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:29:13-36:29
+action#android.nfc.action.NDEF_DISCOVERED
+ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:30:25-74
+category#android.intent.category.DEFAULT
+ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:31:17-76
+	android:name
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:31:27-73
+data
+ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:32:17-35:56
+	android:host
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:33:21-39
+	android:scheme
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:35:21-53
+	android:pathPrefix
+		ADDED from D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\AndroidManifest.xml:34:21-67

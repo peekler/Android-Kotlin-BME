@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WeatherDemo</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="temperature">%1$s °C</string>
+    <string name="sunrise">Sunrise at %1$s</string>
+    <string name="sunset">Sunset at %1$s</string>
+    <string name="title_city_add_dialog">Add City Name</string>
+    <string name="btn_add">Add</string>
+    <string name="error_empty_field">This field is required</string>
+    <string name="btn_dismiss">Dismiss</string>
+</resources>

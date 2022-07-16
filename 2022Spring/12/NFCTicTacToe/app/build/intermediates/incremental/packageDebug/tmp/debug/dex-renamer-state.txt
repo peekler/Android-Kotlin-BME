@@ -1,0 +1,4 @@
+#Sat May 29 20:34:33 CEST 2021
+base.0=D\:\\Development\\VC\\Webuni\\AndroidAdvancedProgramming\\08\\NFCTicTacToe\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
