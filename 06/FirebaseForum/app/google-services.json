@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "797001353391",
+    "project_id": "ait-forum-2022-spring",
+    "storage_bucket": "ait-forum-2022-spring.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797001353391:android:1001765eb4cca23eb8ec5a",
+        "android_client_info": {
+          "package_name": "hu.webuni.aitforum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797001353391-37qp99epgfr31mm4s3ocd9q31c7p0vmv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrqmqk2mJ96DyVi7JYBexxucJP8_XIqg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797001353391-37qp99epgfr31mm4s3ocd9q31c7p0vmv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

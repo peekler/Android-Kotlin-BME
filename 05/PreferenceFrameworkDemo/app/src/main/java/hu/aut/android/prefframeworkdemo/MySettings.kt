@@ -17,7 +17,8 @@ class MySettings : PreferenceActivity(), SharedPreferences.OnSharedPreferenceCha
     override fun onStart() {
         super.onStart()
 
-        PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this)
+        PreferenceManager.getDefaultSharedPreferences(this).
+        registerOnSharedPreferenceChangeListener(this)
     }
 
     override fun onStop() {

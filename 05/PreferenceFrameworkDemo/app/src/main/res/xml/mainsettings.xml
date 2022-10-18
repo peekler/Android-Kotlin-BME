@@ -19,5 +19,6 @@
             android:title="Enter data here"
             android:key="key_data"/>
 
+
     </PreferenceCategory>
 </PreferenceScreen>

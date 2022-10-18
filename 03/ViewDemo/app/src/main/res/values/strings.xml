@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ViewDemo</string>
+
+    <string-array name="cities">
+        <item>New York</item>
+        <item>New Delhi</item>
+        <item>New Orleans</item>
+        <item>New Mexico</item>
+    </string-array>
+
+    <string-array name="fruites">
+        <item>Apple</item>
+        <item>Orange</item>
+        <item>Lemon</item>
+        <item>Banana</item>
+    </string-array>
+
+</resources>

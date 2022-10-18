@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ShoppingList</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="category_array">
+        <item>Food</item>
+        <item>Clothes</item>
+        <item>Sport</item>
+    </string-array>
+</resources>

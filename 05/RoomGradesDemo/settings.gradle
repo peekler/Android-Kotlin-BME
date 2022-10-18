@@ -1,0 +1,2 @@
+rootProject.name='RoomGradesDemo'
+include ':app'
