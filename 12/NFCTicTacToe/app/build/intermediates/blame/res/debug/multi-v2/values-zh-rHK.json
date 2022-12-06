@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Development\\VC\\Webuni\\AndroidAdvancedProgramming\\08\\NFCTicTacToe\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rHK\\values-zh-rHK.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\peter\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\d2048bfd8e41c00c74c44120fcd6603d\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "101",
+                        "endOffsets": "152"
+                    }
+                }
+            ]
+        }
+    ]
+}

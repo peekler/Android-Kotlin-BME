@@ -28,9 +28,10 @@ class MainActivity : AppCompatActivity(), MediaPlayer.OnPreparedListener {
         }
 
         binding.btnStop.setOnClickListener {
-            mediaPlayer?.stop()
+            //mediaPlayer?.stop()
 
-            //mediaPlayer?.seekTo(61000)
+
+            mediaPlayer?.seekTo(61000)
         }
     }
 

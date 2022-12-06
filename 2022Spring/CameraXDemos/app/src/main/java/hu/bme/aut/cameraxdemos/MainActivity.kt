@@ -83,7 +83,6 @@ class MainActivity : AppCompatActivity() {
                     object : ImageCapture.OnImageCapturedCallback() {
                         override fun onCaptureSuccess(image: ImageProxy) {
                             runOnUiThread {
-
                                 binding.ivPhoto.setImageBitmap(
                                         imageProxyToBitmap(
                                                 image
@@ -134,7 +133,8 @@ class MainActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.N)
     private fun setUpCamera() {
-        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
+        val cameraProviderFuture =
+            ProcessCameraProvider.getInstance(this)
 
         cameraProviderFuture.addListener(Runnable {
             // CameraProvider

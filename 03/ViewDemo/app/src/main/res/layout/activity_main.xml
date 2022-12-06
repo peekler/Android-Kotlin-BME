@@ -19,6 +19,7 @@
         android:id="@+id/autoCompleteCities"/>
 
     <RadioGroup
+        android:id="@+id/rbtnGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -45,5 +46,10 @@
         android:id="@+id/spinnerFruits"
         android:layout_width="200dp"
         android:layout_height="wrap_content"/>
+
+    <WebView
+        android:id="@+id/myWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

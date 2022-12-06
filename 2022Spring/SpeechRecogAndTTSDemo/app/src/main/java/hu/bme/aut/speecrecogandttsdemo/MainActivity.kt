@@ -80,8 +80,8 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                     RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                     RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
             )
-            //intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_PREFERENCE,
-            //        "hu-HU");
+            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_PREFERENCE,
+                    "hu-HU");
             intent.putExtra(
                     RecognizerIntent.EXTRA_CALLING_PACKAGE,
                     "hu.aut.android.ttsvoicerecogkotlin"
@@ -98,8 +98,8 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
 
-            //val result = textToSpeech.setLanguage(Locale.forLanguageTag("hu-HU"))
-            val result = textToSpeech.setLanguage(Locale.ENGLISH)
+            val result = textToSpeech.setLanguage(Locale.forLanguageTag("hu-HU"))
+            //val result = textToSpeech.setLanguage(Locale.ENGLISH)
 
             // textToSpeach.setSpeechRate((float) 0.8)
             // textToSpeach.setPitch(1.0f); tts.setPitch(1.1f)

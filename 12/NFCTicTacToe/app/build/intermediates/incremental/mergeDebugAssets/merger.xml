@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\main\assets"/><source path="D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\Development\VC\Webuni\AndroidAdvancedProgramming\08\NFCTicTacToe\app\src\debug\assets"/></dataSet></merger>

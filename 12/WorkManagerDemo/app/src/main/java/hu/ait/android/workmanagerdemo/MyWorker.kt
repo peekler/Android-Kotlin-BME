@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Handler
 import android.os.Looper
 import android.support.annotation.NonNull
+import android.util.Log
 import android.widget.Toast
 import androidx.work.Worker
 import androidx.work.WorkerParameters
@@ -19,6 +20,8 @@ class MyWorker(appContext: Context, workerParams: WorkerParameters):Worker(appCo
         handlerMain.post {
             Toast.makeText(applicationContext, "WORKER - DOWORK", Toast.LENGTH_LONG).show()
         }
+
+        Log.d("WORKER_TAG", "WORKER working")
 
         return Result.SUCCESS;
     }

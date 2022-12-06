@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity(), MainLocationManager.OnNewLocationAvail
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         mainLocatoinManager = MainLocationManager(this, this)
 
         binding.btnGeocode.setOnClickListener {
@@ -156,7 +157,7 @@ class MainActivity : AppCompatActivity(), MainLocationManager.OnNewLocationAvail
             Accuracy: ${location.accuracy}
             Altitude: ${location.altitude}
             Speed: ${location.speed}
-            Time: ${Date(location.time).toString()}
+            Time: ${Date(location.time).toString()}provider
         """.trimIndent()
     }
 
