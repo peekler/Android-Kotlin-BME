@@ -23,8 +23,9 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         }
 
         btnStartSensor.setOnClickListener {
-            var sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
-            sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL)
+            var sensor = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)
+            sensorManager.registerListener(this, sensor,
+                SensorManager.SENSOR_DELAY_NORMAL)
         }
     }
 
@@ -37,14 +38,15 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     }
 
     override fun onSensorChanged(sensorEvent: SensorEvent?) {
-        var x = sensorEvent?.values?.get(0)
+/*        var x = sensorEvent?.values?.get(0)
         var y = sensorEvent?.values?.get(1)
         var z = sensorEvent?.values?.get(2)
 
-        tvStatus.text = "x: $x, y: $y, z: $z"
+        tvStatus.text = "x: $x, y: $y, z: $z"*/
+
+        tvStatus.text = "Magnet: ${sensorEvent?.values?.get(0)}"
     }
 
     override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
-
     }
 }
