@@ -2,7 +2,6 @@
   <library name="Gradle: com.google.mlkit:common:17.1.1@aar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/75fa12031c38034388f3ac9946f2d038/jetified-common-17.1.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/75fa12031c38034388f3ac9946f2d038/jetified-common-17.1.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/75fa12031c38034388f3ac9946f2d038/jetified-common-17.1.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>

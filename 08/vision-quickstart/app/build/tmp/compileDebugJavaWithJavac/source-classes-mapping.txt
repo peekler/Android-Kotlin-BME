@@ -2,12 +2,12 @@ com/google/mlkit/vision/demo/preference/CameraXLivePreviewPreferenceFragment.jav
  com.google.mlkit.vision.demo.preference.CameraXLivePreviewPreferenceFragment
 com/google/mlkit/vision/demo/preference/LivePreviewPreferenceFragment.java
  com.google.mlkit.vision.demo.preference.LivePreviewPreferenceFragment
-com/google/mlkit/vision/demo/java/facedetector/FaceGraphic.java
- com.google.mlkit.vision.demo.java.facedetector.FaceGraphic
 com/google/mlkit/vision/demo/java/posedetector/classification/Utils.java
  com.google.mlkit.vision.demo.java.posedetector.classification.Utils
 com/google/mlkit/vision/demo/java/posedetector/classification/PoseClassifier.java
  com.google.mlkit.vision.demo.java.posedetector.classification.PoseClassifier
+com/google/mlkit/vision/demo/java/facedetector/FaceGraphic.java
+ com.google.mlkit.vision.demo.java.facedetector.FaceGraphic
 com/google/mlkit/vision/demo/java/posedetector/classification/RepetitionCounter.java
  com.google.mlkit.vision.demo.java.posedetector.classification.RepetitionCounter
 com/google/mlkit/vision/demo/java/posedetector/classification/ClassificationResult.java
@@ -22,14 +22,14 @@ com/google/mlkit/vision/demo/FrameMetadata.java
  com.google.mlkit.vision.demo.FrameMetadata
  com.google.mlkit.vision.demo.FrameMetadata$1
  com.google.mlkit.vision.demo.FrameMetadata$Builder
-com/google/mlkit/vision/demo/java/facedetector/FaceDetectorProcessor.java
- com.google.mlkit.vision.demo.java.facedetector.FaceDetectorProcessor
 com/google/mlkit/vision/demo/java/posedetector/classification/EMASmoothing.java
  com.google.mlkit.vision.demo.java.posedetector.classification.EMASmoothing
-com/google/mlkit/vision/demo/CameraImageGraphic.java
- com.google.mlkit.vision.demo.CameraImageGraphic
+com/google/mlkit/vision/demo/java/facedetector/FaceDetectorProcessor.java
+ com.google.mlkit.vision.demo.java.facedetector.FaceDetectorProcessor
 com/google/mlkit/vision/demo/java/textdetector/TextRecognitionProcessor.java
  com.google.mlkit.vision.demo.java.textdetector.TextRecognitionProcessor
+com/google/mlkit/vision/demo/CameraImageGraphic.java
+ com.google.mlkit.vision.demo.CameraImageGraphic
 com/google/mlkit/vision/demo/InferenceInfoGraphic.java
  com.google.mlkit.vision.demo.InferenceInfoGraphic
 com/google/mlkit/vision/demo/preference/CameraXSourceDemoPreferenceFragment.java
@@ -44,10 +44,10 @@ com/google/mlkit/vision/demo/CameraSourcePreview.java
  com.google.mlkit.vision.demo.CameraSourcePreview
  com.google.mlkit.vision.demo.CameraSourcePreview$1
  com.google.mlkit.vision.demo.CameraSourcePreview$SurfaceCallback
-com/google/mlkit/vision/demo/java/objectdetector/ObjectDetectorProcessor.java
- com.google.mlkit.vision.demo.java.objectdetector.ObjectDetectorProcessor
 com/google/mlkit/vision/demo/java/textdetector/TextGraphic.java
  com.google.mlkit.vision.demo.java.textdetector.TextGraphic
+com/google/mlkit/vision/demo/java/objectdetector/ObjectDetectorProcessor.java
+ com.google.mlkit.vision.demo.java.objectdetector.ObjectDetectorProcessor
 com/google/mlkit/vision/demo/java/VisionProcessorBase.java
  com.google.mlkit.vision.demo.java.VisionProcessorBase
  com.google.mlkit.vision.demo.java.VisionProcessorBase$1
@@ -92,10 +92,10 @@ com/google/mlkit/vision/demo/java/labeldetector/LabelDetectorProcessor.java
 com/google/mlkit/vision/demo/java/ChooserActivity.java
  com.google.mlkit.vision.demo.java.ChooserActivity
  com.google.mlkit.vision.demo.java.ChooserActivity$MyArrayAdapter
-com/google/mlkit/vision/demo/java/CameraXSourceDemoActivity.java
- com.google.mlkit.vision.demo.java.CameraXSourceDemoActivity
 com/google/mlkit/vision/demo/java/posedetector/classification/PoseSample.java
  com.google.mlkit.vision.demo.java.posedetector.classification.PoseSample
+com/google/mlkit/vision/demo/java/CameraXSourceDemoActivity.java
+ com.google.mlkit.vision.demo.java.CameraXSourceDemoActivity
 com/google/mlkit/vision/demo/CameraXViewModel.java
  com.google.mlkit.vision.demo.CameraXViewModel
 com/google/mlkit/vision/demo/java/posedetector/classification/PoseClassifierProcessor.java

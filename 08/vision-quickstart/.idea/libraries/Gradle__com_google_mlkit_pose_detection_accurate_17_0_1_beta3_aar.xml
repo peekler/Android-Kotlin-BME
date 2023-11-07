@@ -2,7 +2,6 @@
   <library name="Gradle: com.google.mlkit:pose-detection-accurate:17.0.1-beta3@aar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c625da950905c687690c97ce6699d28f/jetified-pose-detection-accurate-17.0.1-beta3/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c625da950905c687690c97ce6699d28f/jetified-pose-detection-accurate-17.0.1-beta3/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c625da950905c687690c97ce6699d28f/jetified-pose-detection-accurate-17.0.1-beta3/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
